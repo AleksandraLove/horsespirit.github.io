@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Лошади</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1 id="top">ВОСТОЧНАЯ СКАЗКА</h1>
+<p><a href="#section-1">Наши жители</a></p>
+<p><a href="#section-3">Наши контакты</a></p>
+
+<div id="container">
+	<img class="slides" src="img/horse-sky.jpg"/>
+	<img class="slides" src="img/kakfreez.jpg"/>
+	<img class="slides" src="img/weandborba.jpg"/>
+	<img class="slides" src="img/aut16free.jpg"/>
+	<img class="slides" src="img/we2014.jpg"/>
+	<img class="slides" src="img/horse-1.jpg"/>
+	<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+	<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+</div>
+
+<div class="a">
+	<p>Наблюдая за лошадью, можно открыть для себя новый мир и увидеть больше, чем когда мы ездим на ней верхом. Играя с животными мы проникаем в их мир и начинаем понимать их, а они нас. А эти большие глаза, просто чудо природы вдохновляют и притягивают.</p>
+</div>
+
+<div class="a">
+	<p>Лошади - это не инструмент для удовлетворения наших физических и материальных потребностей. Это живая личность. Которая, как и мы желает быть свободной в своем выборе. У всех животных есть свой язык коммуникации, на котором они привыкли общаться. Когда мы навязываем им привычный нам язык общения, то мы не договариваемся с ними, а подчиняем своей воле. По этой причине они часто сопротивляются и люди оказывают на них физическое воздействие. Научившись их языку общения мы открываем неограниченные возможности взаимопонимания и взаимодействия с животными. Они добровольно и непрерывно готовы сотрудничать с нами. Шаг за шагом идем к мечте с лошадью, ощущая только радость от сотрудничества. Это духовный путь мгновенного соединения. Это путешествие доверия, которое продолжается на свободе. Изучая природу лошадей мы обретаем надежность и укрепление доверия с этими прекрасными созданиями.</p>
+</div>
+
+<h2 id="section-1">Наши жители</h2>
+<p><a href="#top">ВОСТОЧНАЯ СКАЗКА</a></p>
+
+<div class="a">
+	<p>Всегда рады новым встречам. Вы можете принести с собой вкусняшки и покормить лошадку. А также сделать незабываемые фото на память.</p>
+</div>
+
+<img src="img/borba-2014.jpg" alt="horse">
+
+<iframe width="760" height="640" src="https://www.youtube.com/embed/wTMR8k9gmWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<img src="img/horse-2.jpg" alt="horse">
+
+<iframe width="760" height="640" src="https://www.youtube.com/embed/B4o_eXHsUbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h4 id="section-3">Наши контакты</h4>
+
+<p><a href="#top">ВОСТОЧНАЯ СКАЗКА</a></p>
+
+<p>Домашняя конюшня "Восточная сказка"</p>
+<p>Номер телефона для связи: +38(095)917-12-18</p>
+<p>e-mail: iamlifeerrada@gmail.com</p>
+
+<h5 onclick="this.innerHTML='МОРКОВКА, ЯБЛОЧКИ, БУРЯЧЁК'">Нажми и узнай, что любит лошадка!</h5>
+
+<script src="script.js" defer>
+	var index = 1;
+
+function plusIndex (n) {
+  index = index + n;
+  showImage(index);
+}
+
+showImage(1);
+
+function showImage(n){
+  var i;
+  var x = document.getElementsByClassName("slides");
+  if(n > x.length){ index = 1};
+  if(n < 1){ index = x.length};
+  for(i=0;i<x.length;i++)
+      {
+          x[i].style.display = "none";
+      }
+  x[index-1].style.display = "block";
+}
+
+autoSlide();
+function autoSlide(){
+  var i;
+  var x = document.getElementsByClassName("slides");
+    for(i=0;i<x.length;i++)
+      {
+            x[i].style.display = "none";
+}
+  if(index > x.length){ index = 1}
+  x[index-1].style.display = "block";
+  index++;
+  setTimeout (autoSlide,2000);
+}
+</script>
+</body>
+</html>

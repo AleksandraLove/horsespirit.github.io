@@ -1,0 +1,87 @@
+html {
+	background: #ffd1b3;
+}
+body {
+	front-family: "-apple-system", BlinkMacSystemFont, Arial, sans-serif;
+}
+
+h1 {
+	text-shadow: 3px 1px #808080;
+	color: #0099ff;
+	text-align: center;
+	font-weight: normal;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 50px;
+	text-align: center;
+	color: #4da6ff;
+}
+
+h4 {
+	font-size: 40px;
+	text-align: center; 
+	color: #800000;
+}
+
+h5 {
+	font-size: 50px;
+	text-align: center;
+	color: #ff6666;
+}
+
+p{
+	font-size: 30px;
+	text-align: justify;
+	text-indent: 50px;
+	margin-top: auto;
+}
+
+div.a {
+ 	width: 100%;
+ 	border: 0.5px solid #ffd1b3;
+	
+}
+
+
+#container {
+	width: 60%;
+	height: 480px;
+	border: 1px solid black;
+	margin: 0 auto;
+	position: relative;
+}
+
+#container>img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#container>.btn{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border: none;
+	border-radius: 25px;
+	top: 200px;
+	background: black;
+	color: white;
+	font-size: 20px;
+}
+
+#container>#btn1: hover{
+	box-shadow: 10px 0px 20px 0px black;
+} 
+
+#container>#btn2: hover{
+	box-shadow: -10px 0px 20px 0px black;
+} 
+
+#container>#btn2{
+	position: relative;
+	float: right;
+}
+
+
